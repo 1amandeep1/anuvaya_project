@@ -11,6 +11,10 @@ This repository is a small full-stack demo implementing a dark-mode social feed 
 - Auth: JWT tokens issued by the API and stored in `localStorage` for this demo
 - Passwords: hashed with bcryptjs
 
+  <img width="1423" height="822" alt="abc2" src="https://github.com/user-attachments/assets/3ae8a4be-aa4f-421b-9785-88da735f1aa8" />
+  <img width="1437" height="842" alt="abc" src="https://github.com/user-attachments/assets/776321e8-e016-46f3-8487-0a3fa62958ec" />
+
+
 ## Why this stack
 
 - Single repo (Next.js) keeps frontend and backend together for fast iteration and easy deployment.
@@ -133,7 +137,6 @@ fetch('/api/v1/posts', {
 ```
 
 ## Where data is stored
-
 Data is stored in `data/db.json` and managed by `lib/store.ts`. The store exposes functions used by the API routes. This approach is intentionally minimal for local demos.
 
 ## Known trade-offs & future improvements
@@ -144,10 +147,3 @@ Data is stored in `data/db.json` and managed by `lib/store.ts`. The store expose
 - Tests: add integration tests for API routes (register/login/post flow) and unit tests for core logic.
 - Pagination: add cursor-based pagination for the posts endpoint.
 
-## Next steps I can do for you
-
-- Add a minimal integration test (register → login → create post) and re-enable the test script.
-- Add an idempotency guard on POST /posts to avoid accidental duplicate posts.
-- Replace the file store with SQLite + Prisma and wire up migrations.
-
-If you want me to update the README further or implement any of the next steps, tell me which and I'll proceed.
